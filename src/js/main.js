@@ -685,7 +685,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      nav.classList.add('fix');
+    } else {
+      nav.classList.remove('fix');
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn5 = document.querySelector('.menu-btn');

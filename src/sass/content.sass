@@ -406,6 +406,11 @@ ul.info li
       margin-bottom: 0
 .nav 
    margin: 30px 0
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 200
+   width: 100%
    &__box 
       align-items: center
       justify-content: space-between
@@ -526,7 +531,7 @@ ul.info li
       z-index: -1
    &__wrap 
       display: flex
-      margin-top: 49px
+      margin-top: 140px
       position: relative
       justify-content: space-between 
       align-items: flex-start
@@ -1628,3 +1633,15 @@ iframe
    pointer-events: auto
 .nav__area_adapt
    display: none
+.nav.fix 
+   .nav__content, .nav__address, .nav__info
+      background: white
+      border: 0.6px solid rgba(255, 255, 255, 0.15)
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
+   .nav__list li a, .nav__area a
+      color: #2F323F
+      &:hover 
+         color: $yel
+   .nav__local span, .nav__area p
+      color: #2F323F
+   

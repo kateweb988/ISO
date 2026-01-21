@@ -243,6 +243,15 @@
       margin-bottom: 40px
       margin-top: 20px
       margin-right: 0
+   .nav.fix 
+      .nav__area_adapt
+         border: 0.6px solid rgba(255, 255, 255, 0.15)
+         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
+         background: white
+      .menu-btn
+         background: url(/img/bur11.svg) no-repeat center center
+         &.active 
+            background: url(/img/bur22.svg) no-repeat center center
    .nav__area p
       font-size: 10px
    .nav
@@ -274,7 +283,7 @@
    .nav__content
       width: max-content
    .header__wrap
-      margin-top: 0
+      margin-top: 175px
       padding-bottom: 70px
       flex-direction: column
    .header__wrap h1
@@ -508,6 +517,11 @@
       font-size: 12px
    .footer__order
       margin-top: 101px
+   .nav .nav__content, .nav__info
+      border: none !important
+      background: transparent !important
+      box-shadow: none !important
+      backdrop-filter: inherit !important
 @media ( max-width: 991px )
    .container 
       max-width: 720px !important
