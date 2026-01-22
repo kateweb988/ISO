@@ -379,7 +379,12 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 20,
         slidesPerView: 2
       }
+    },
+    on: {
+    slideChangeTransitionEnd() {
+      AOS.refreshHard();
     }
+  }
   });
    const swiper22 = new Swiper('.swiper22', {
     slidesPerView: 2,
