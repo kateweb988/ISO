@@ -577,6 +577,70 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+   const swiper8 = new Swiper('.swiper8', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next8',
+      prevEl: '.swiper-button-prev8',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 3
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      }
+    }
+  });
+   const swiper9 = new Swiper('.swiper9', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next9',
+      prevEl: '.swiper-button-prev9',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 3
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1300: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1302: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+    }
+  });
 });
 document.addEventListener('DOMContentLoaded', () => {
 
