@@ -641,6 +641,228 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     }
   });
+
+  const swiper10 = new Swiper('.swiper10', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-button-next10',
+      prevEl: '.swiper-button-prev10',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 20,
+        loop: true,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 3, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 4, 
+        allowTouchMove: false,   // ❌ тач
+        simulateTouch: false,    // ❌ мышь
+      }
+    }
+  });
+  const swiper11 = new Swiper('.swiper11', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next11',
+      prevEl: '.swiper-button-prev11',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 3
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1300: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1302: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+    }
+  });
+  const swiper12 = new Swiper('.swiper12', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next12',
+      prevEl: '.swiper-button-prev12',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 20,
+        loop: true,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3, 
+        allowTouchMove: false,   // ❌ тач
+        simulateTouch: false,    // ❌ мышь
+      }
+    }
+  });
+   const swiper13 = new Swiper('.swiper13', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next13',
+      prevEl: '.swiper-button-prev13',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1300: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1302: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const parent = document.querySelector('.vr');
+  if (!parent) return;
+
+  const elements = parent.querySelectorAll('*');
+
+  elements.forEach(el => {
+    const style = window.getComputedStyle(el);
+
+    // Проверяем разные свойства
+    if (style.color === 'rgb(168, 72, 241)') {
+      el.style.color = '#3573f9';
+    }
+
+    if (style.backgroundColor === 'rgb(168, 72, 241)') {
+      el.style.backgroundColor = '#3573f9';
+    }
+
+    if (style.borderColor === 'rgb(168, 72, 241)') {
+      el.style.borderColor = '#3573f9';
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  $(document).ready(function () {
+    $(".youtube-link").grtyoutube({
+      autoPlay: true
+    });
+  });
+
+  (function ($) {
+
+    $.fn.grtyoutube = function (options) {
+
+      return this.each(function () {
+
+        // Get video ID
+        var getvideoid = $(this).attr("youtubeid");
+
+        // Default options
+        var settings = $.extend({
+          videoID: getvideoid,
+          autoPlay: true
+        }, options);
+
+        // Convert some values
+        if (settings.autoPlay === true) { settings.autoPlay = 1 } else { settings.autoPlay = 0 }
+
+        // Initialize on click
+        if (getvideoid) {
+          $(this).on("click", function () {
+            $("body").append('<div class="grtvideo-popup">' +
+              '<div class="grtvideo-popup-content">' +
+              '<span class="grtvideo-popup-close"></span>' +
+              '<iframe class="grtyoutube-iframe" src="https://www.youtube.com/embed/' + settings.videoID + '?rel=0&wmode=transparent&autoplay=' + settings.autoPlay + '&iv_load_policy=3" allowfullscreen frameborder="0"></iframe>' +
+              '</div>' +
+              '</div>');
+          });
+        }
+
+        // Close the box on click or escape
+        $(this).on('click', function (event) {
+          event.preventDefault();
+          $(".grtvideo-popup-close, .grtvideo-popup").click(function () {
+            $(".grtvideo-popup").remove();
+          });
+        });
+
+        $(document).keyup(function (event) {
+          if (event.keyCode == 27) {
+            $(".grtvideo-popup").remove();
+          }
+        });
+      });
+    };
+  }(jQuery));
 });
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -755,7 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector('.nav-main');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
@@ -770,12 +992,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn5 = document.querySelector('.menu-btn');
   const menu5 = document.querySelector('.menu');
   const menuClose = document.querySelector('.menu__close');
+  const header = document.querySelector('.pages header');
 
-  function updateBodyBackground() {
+  function updateBodyState() {
     if (menu5.classList.contains('active')) {
       document.body.classList.add('menu-active');
+      document.body.style.overflow = 'hidden'; // 👈 убрали скролл
+
+      if (header) header.style.zIndex = 'initial';
+
     } else {
       document.body.classList.remove('menu-active');
+      document.body.style.overflow = ''; // 👈 вернули скролл
+
+      if (header) header.style.zIndex = '';
     }
   }
 
@@ -783,7 +1013,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn5.addEventListener('click', () => {
     menuBtn5.classList.toggle('active');
     menu5.classList.toggle('active');
-    updateBodyBackground();
+    updateBodyState();
   });
 
   // Закрытие по кнопке
@@ -791,7 +1021,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
     menu5.classList.remove('active');
     menuBtn5.classList.remove('active');
-    updateBodyBackground();
+    updateBodyState();
   });
 
   // Закрытие по фону
@@ -799,16 +1029,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === menu5) {
       menu5.classList.remove('active');
       menuBtn5.classList.remove('active');
-      updateBodyBackground();
+      updateBodyState();
     }
   });
+
   // Закрытие при клике по ссылкам меню
   document.querySelectorAll('.menu li a.go_to').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
       menuBtn5.classList.remove('active');
       menu5.classList.remove('active');
-      updateBodyBackground(); // 🔹 вот эта строка решает проблему
+      updateBodyState();
     });
   });
 
@@ -827,8 +1058,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
+});
 // Замена <img class="svg"> на inline SVG
 document.addEventListener("DOMContentLoaded", () => {
   const svgImages = document.querySelectorAll('img.svg');
