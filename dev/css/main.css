@@ -4245,6 +4245,12 @@ iframe {
 .vr nav .nav__info .nav__socials a:hover p {
   color: #3573f9;
 }
+.vr .kids__video:hover .svg path {
+  fill: #3573f9;
+}
+.vr .kids__video:hover .svg rect {
+  stroke: #3573f9;
+}
 
 @media screen and (max-width: 1500px) {
   .container {
