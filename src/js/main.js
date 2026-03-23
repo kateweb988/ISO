@@ -750,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-   const swiper13 = new Swiper('.swiper13', {
+  const swiper13 = new Swiper('.swiper13', {
     slidesPerView: 2,
     spaceBetween: 20,
      navigation: {
@@ -784,6 +784,186 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 20,
         slidesPerView: 2
       },
+    }
+  });
+  const swiper14 = new Swiper('.swiper14', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next14',
+      prevEl: '.swiper-button-prev14',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1300: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+      1302: {
+        spaceBetween: 20,
+        slidesPerView: 4
+      },
+    }
+  });
+  const swiper15 = new Swiper('.swiper15', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+     navigation: {
+      nextEl: '.swiper-button-next15',
+      prevEl: '.swiper-button-prev15',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1300: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+      1302: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+    }
+  });
+  const swiper16 = new Swiper('.swiper16', {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-button-next16',
+      prevEl: '.swiper-button-prev16',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 20,
+        loop: true,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 2, 
+        allowTouchMove: false,   // ❌ тач
+        simulateTouch: false,    // ❌ мышь
+      }
+    }
+  });
+  const swiper17 = new Swiper('.swiper17', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-button-next17',
+      prevEl: '.swiper-button-prev17',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 3, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 4, 
+        allowTouchMove: false,   // ❌ тач
+        simulateTouch: false,    // ❌ мышь
+      }
+    }
+  });
+  const swiper18 = new Swiper('.swiper18', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-button-next18',
+      prevEl: '.swiper-button-prev18',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        allowTouchMove: true,
+        simulateTouch: true,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 3, 
+        allowTouchMove: false,   // ❌ тач
+        simulateTouch: false,    // ❌ мышь
+      }
     }
   });
 });
